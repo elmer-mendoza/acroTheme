@@ -3,7 +3,7 @@ import Navigation from './Navigation'
 
 function Hero() {
     return (
-        <div>
+        <div className="hero">
             <Navigation/>
         </div>
     )

@@ -37,7 +37,11 @@ export const navList = [
         link:"",
     },
     {
-        name:"sources",
+        name:"case studies",
+        link:"",
+    },
+    {
+        name:"resources",
         link:""    
     },
     {

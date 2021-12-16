@@ -5,8 +5,10 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
     const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+    const [isSubSubmenuOpen, setIsSubSubmenuOpen] = useState(false);
     const [page, setPage] = useState({ name:'',link:'',subMenu:[]});
     const [location, setLocation] = useState({});
+    // const [toggle, setToggle] = useState(false);
     
     const openSubmenu =(text,coordinates) =>{
         const page = navList.find((list) => list.name === text);
@@ -19,6 +21,11 @@ const AppProvider = ({ children }) => {
     const closeSubmenu = () => {
     setIsSubmenuOpen(false);
   };
+
+  const toggle =(e)=>{
+    e.preventDefault();
+    setIsSubSubmenuOpen(!isSubSubmenuOpen);
+  }
     
 
   return (
@@ -27,8 +34,10 @@ const AppProvider = ({ children }) => {
         openSubmenu,
         closeSubmenu,
         isSubmenuOpen, 
+        isSubSubmenuOpen,
         location,
-        page
+        page,
+        toggle
        
       }}
     >

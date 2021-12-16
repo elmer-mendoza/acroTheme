@@ -8,13 +8,24 @@
   --clr-white: #fff;
 }
 body {
+  font-family:'Roboto',sans-serif;
   margin: 0;
   padding: 0;
+}
+.hero {
+  background:url(./acro.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 .header {
   width:95%;
   margin: 0 auto;
   padding: 2em 0;
+}
+.header a{
+   color:rgb(235, 229, 229);
 }
 .nav {
   display: flex;
@@ -30,38 +41,48 @@ body {
   }
 
 .icon{
-  margin-left:1em;
+  margin-left:0.25em;
+}
+aside {
+  padding-left: 0 !important;
 }
 
-.navList {
-  display: flex;
-}
 .hideSubMenu {
   height: 0;
   overflow: hidden;
   transition: all 0.
 }
-a {
-  text-decoration: none;
-}
-li {
+
+li,
+a,
+.submenu.show h4
+ {
   list-style-type: none;
-  text-transform: uppercase;
-  
-}
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight:bold;
+  text-transform: capitalize;
+ }
+/* .submenu.show h4::first-letter,
+li::first-letter {
+   text-transform: uppercase;
+} */
 
 .submenu {
-  background: var(--clr-white);
-  box-shadow: var(--dark-shadow);
+  background: rgb(26, 25, 25);
+  /* box-shadow: var(--clr-white); */
+  /* background: var(--clr-white);
+  box-shadow: var(--dark-shadow); */
   position: absolute;
-  top: 4rem;
-  left: 50%;
+  /* top: 4rem;
+  left: 50%; */
   transform: translateX(-50%);
   z-index: 3;
   display: none;
   padding: 2rem;
   border-radius: var(--radius);
   transition: var(--transition);
+  
 }
 .submenu::before {
   content: '';
@@ -70,14 +91,47 @@ li {
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 5px solid var(--clr-white);
+  border-bottom: 5px solid black;
   position: absolute;
   top: -5px;
   left: 50%;
   transform: translateX(-50%);
-  background-color:yellow;
 }
 
-.submenu.show {
+
+.submenu.show, .subSubMenu.show {
   display: block;
+}
+.subSubMenu {
+  display:none;
+}
+
+.subSubMenu ul, .subSubMenu a{
+  font-size: 0.85em;
+  margin-top: 1em;
+  padding-left: 0.75em;
+}
+
+.subcategory {
+  width:250px;
+  padding:0 !important;
+  margin:0 !important;
+  color:rgb(235, 229, 229); 
+  /* background-color: black;  */
+}
+.listName {
+  width:80%
+}
+
+.subArrowIcon {
+  width:20%
+}
+.submenuContainer{
+padding:0;
+}
+.icon, .subArrowIcon {
+  color:rgb(249,94,39) !important;
+}
+.subArrowIcon {
+  color:rgb(249,94,39);
 }

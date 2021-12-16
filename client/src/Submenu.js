@@ -1,10 +1,24 @@
 import React,{useEffect,useRef} from 'react'
+import {FaChevronDown,FaChevronUp} from "react-icons/fa";
 import { useGlobalContext } from './context';
 
 function Submenu() {
     const container = useRef(null)
-    const {page,location,isSubmenuOpen}= useGlobalContext();
-    
+    const {page,location,isSubmenuOpen,isSubSubmenuOpen,toggle}= useGlobalContext();
+        
+    const Subpage =({menu})=> menu.subMenu.map((menu,index)=>{
+        return(
+        <div className={isSubSubmenuOpen ? 'subSubMenu show' : 'subSubMenu'}>
+            <ul>
+                <li>
+                    <a href={menu.link}>{menu.name}</a> 
+                </li>
+            </ul>
+        </div>
+        )
+    })
+        
+ 
     useEffect(() => {
         const submenu = container.current
         const { center, bottom } = location
@@ -12,29 +26,38 @@ function Submenu() {
         submenu.style.top = `${bottom}px`
          
     }, [page, location]);
-
-    console.log(page)
+    
     return (
-        <div>
-             <aside
-                    className={`${isSubmenuOpen ? 'submenu show' : 'submenu'}`}
-                    ref={container}
-                    >
-                    <section>
-                        <h4>{page.name}</h4>
-                        <div >
+        <div className={`${isSubmenuOpen ? 'submenu show' : 'submenu'}`}
+                    ref={container}>
+             
                         {page.subMenu.map(menu=>{
                             return(
-                                <ul>
-                                    <li><a>{menu.name}</a></li>  
-                                </ul>
+                                
+                                    <ul className='submenuContainer'>
+                                        <li>
+                                            <div className=" subcategory row">
+
+                                                <div className='listName'>                                              
+                                                    <a href={menu.link}>{menu.name}</a> 
+                                                </div>
+                                                <div>
+                                                    <a className="subArrowIcon" href="">
+                                                        {menu.subMenu?
+                                                        (isSubSubmenuOpen ? <FaChevronDown onClick={toggle}/>:<FaChevronUp onClick={toggle}/>)
+                                                        :null}
+                                                    </a>
+                                                </div>
+                                                </div>
+                                            <div>
+                                              {menu.subMenu ? <Subpage menu={menu}/>: null}  
+                                            </div>
+                                       </li>
+                                     </ul>
+                                 
                             )
-                        })}
-                            
-                        
-                        </div>
-                    </section>
-            </aside> 
+                         })}
+                   
         </div>
     )
 }
