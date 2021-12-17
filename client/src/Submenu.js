@@ -44,7 +44,7 @@ function Submenu() {
                                                 <div>
                                                     <a className="subArrowIcon" href="">
                                                         {menu.subMenu?
-                                                        (isSubSubmenuOpen ? <FaChevronDown onClick={toggle}/>:<FaChevronUp onClick={toggle}/>)
+                                                        (isSubSubmenuOpen ? <FaChevronUp onClick={toggle}/>:<FaChevronDown onClick={toggle}/>)
                                                         :null}
                                                     </a>
                                                 </div>

@@ -35,6 +35,15 @@ export const navList = [
     {
         name:"customers",
         link:"",
+        subMenu:[
+            { name:"B2B",link:"" },
+            { name:"manufacturing",link:"" },
+            { name:"medical manufacturing",link:"" },
+            { name:"members",link:"" },
+            { name:"retail & B2C",link:"" },
+            { name:"telecommunication",link:"" },
+            { name:"wholesale",link:"" }
+        ]    
     },
     {
         name:"case studies",
@@ -46,7 +55,11 @@ export const navList = [
     },
     {
         name:"about",
-        link:""
+        link:"",
+        subMenu:[
+            { name:"overview",link:"" },
+            { name:"partners",link:"" }
+        ]    
     }
 
 ]

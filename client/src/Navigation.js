@@ -42,6 +42,7 @@ function Navigation() {
                         )
 
                     })}
+                <button><h2>Contact</h2></button>
                 </div> 
             </div>
             
