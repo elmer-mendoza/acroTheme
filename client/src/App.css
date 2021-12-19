@@ -17,9 +17,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 95vh;
 }
 .header {
+  position: fixed;
   width:95%;
   margin: 0 auto;
   padding: 2em 0;
@@ -27,21 +28,26 @@ body {
 .header a{
    color:rgb(235, 229, 229);
 }
-.header button {
+button {
   color:white;
   background-color:rgb(249,94,39);
   border: none;
   height: 4em;
   padding: 0 2em ;
   margin: auto;
-  margin-left: 3em;
   border-radius:3px;
-  
 }
+.header button {
+  margin-left: 3em;
+}
+
 .nav {
   display: flex;
   align-items: center;
 }
+.nav a:hover{
+  color:rgb(249,94,39);
+ }
 .container.title{
   font-size:2.2rem;
   color:white;
@@ -50,9 +56,27 @@ body {
  }
 
 .rowTitle {
-  max-width: 60%;
-  padding-top:1em;
+  max-width: 800px;
+  padding-top:5em;
   margin:0;
+}
+.heroButtonContainer {
+  padding-top: 1em;
+}
+.heroButtonContainer p{
+  color:rgb(249,94,39) !important;
+  font-size:.85rem !important;
+  font-weight: 500  !important;
+  text-transform:capitalize !important;
+  letter-spacing: 0.5px !important;
+  }
+.heroButtonContainer button{
+  color:rgb(249,94,39);
+  background-color:transparent;
+  border:solid 0.1px rgb(249,94,39) ;
+  margin-bottom: 1em;
+  margin-right:1.5em;
+  padding:0 1.5em;
 }
 .rowTitle h1  {
   font-weight:100;
@@ -72,7 +96,7 @@ body {
 }
 
 .icon{
-  margin-left:0.25em;
+  margin-left:0.35em;
 }
 aside {
   padding-left: 0 !important;
@@ -127,6 +151,12 @@ a,
 .subSubMenu {
   display:none;
 }
+.subSubMenu.show a{
+  color:#8a9499ff;
+}
+.subSubMenu.show a:hover , .submenu.show a:hover{
+  color:rgb(249,94,39);
+}
 
 .subSubMenu ul, .subSubMenu a{
   font-size: 0.85em;
@@ -151,8 +181,10 @@ a,
 padding:0;
 }
 .icon, .subArrowIcon {
-  color:rgb(249,94,39) !important;
+  color:rgb(249,94,39) !important ;
 }
-.subArrowIcon {
-  color:rgb(249,94,39);
-}
+
+
+
+
+

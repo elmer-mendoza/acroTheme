@@ -1,4 +1,4 @@
-import React,{useState,useRef} from 'react';
+import React,{useState,useRef,useEffect} from 'react';
 import{navList} from "./data";
 import {FaChevronDown,FaChevronUp} from "react-icons/fa";
 import { useGlobalContext } from './context';
@@ -6,6 +6,7 @@ import Submenu from "./Submenu";
 
 function Navigation() {
    const {openSubmenu,closeSubmenu } = useGlobalContext();
+   const[ imageLogo, setImageLogo]= useState("./images/logoDefault.svg")
    
    const displayMenu=(e)=>{
     const page = e.target.textContent;
@@ -22,10 +23,25 @@ function Navigation() {
       closeSubmenu();
     }
 }
+ 
+    
+useEffect(() => { 
+    window.onscroll = () => {
+    const logo = 
+    (window.pageYOffset >= 50  ?
+        "./images/logoCompact.svg" :
+        "./images/logoDefault.svg");
+        setImageLogo(logo);
+        console.log(logo);
+           
+  }}, [imageLogo]);
+    
+    
+        
     return (
         <div className="header" >
             <div className="row" >
-               <img src="./images/logoDefault.svg" alt="logo"/>
+            <img src={imageLogo} alt="logo"/>
                 <div className=" nav"  onMouseOver={handleSubmenu}>
                     {navList.map(list =>{
                         return(
@@ -45,7 +61,6 @@ function Navigation() {
                 <button><h2>Contact</h2></button>
                 </div> 
             </div>
-            
             <Submenu navlist={navList}/>
         </div>
     )
