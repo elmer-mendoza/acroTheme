@@ -64,3 +64,34 @@ export const navList = [
 
 ]
 
+export const expertise = [
+    {
+        title:"Discovery & Strategy",
+        image:"./images/syncIcon.svg",
+        desc:"Uncovering your precise business needs through immersive collaboration.",
+        alt:"sync icon",
+        link:""
+    },
+    {
+        title:"User Experience Design",
+        image:"./images/compassIcon.svg",
+        desc:"Building engaging user experiences that drive sales and productivity.",
+        alt:"compass icon",
+        link:""
+    },
+    {
+        title:"Technical Development",
+        image:"./images/codeIcon.svg",
+        desc:"Specializing in sustainable solutions built on our Drupal expertise and proven technology.",
+        alt:"code icon",
+        link:""
+    },
+    {
+        title:"Project Mangaement",
+        image:"./images/projectDiagramIcon.svg",
+        desc:"Building collaborative partnerships through Agile methodology and continuous improvement.",
+        alt:"project diagram icon",
+        link:""
+    }
+]  
+

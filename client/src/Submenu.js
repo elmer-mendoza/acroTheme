@@ -4,7 +4,7 @@ import { useGlobalContext } from './context';
 
 function Submenu() {
     const container = useRef(null)
-    const {page,location,isSubmenuOpen,isSubSubmenuOpen,toggle}= useGlobalContext();
+    const {page,location,isSubmenuOpen,isSubSubmenuOpen,toggle,closeSubmenu}= useGlobalContext();
         
     const Subpage =({menu})=> menu.subMenu.map((menu,index)=>{
         return(
@@ -29,11 +29,9 @@ function Submenu() {
     
     return (
         <div className={`${isSubmenuOpen ? 'submenu show' : 'submenu'}`}
-                    ref={container}>
-             
+                    ref={container} onMouseLeave={closeSubmenu}>
                         {page.subMenu.map(menu=>{
                             return(
-                                
                                     <ul className='submenuContainer'>
                                         <li>
                                             <div className=" subcategory row">
@@ -55,8 +53,8 @@ function Submenu() {
                                        </li>
                                      </ul>
                             )
+                           
                          })}
-                   
         </div>
     )
 }

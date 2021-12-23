@@ -1,12 +1,13 @@
 import React from 'react';
-import Navigation from './Navigation'
+import Header from './Header';
 
 function Hero() {
+   
     return (
         <div className="hero">
-            <Navigation/>
-            <div className="container title">
-                <div className="rowTitle">
+            <Header/>
+            <div className="container">
+                <div className="heroTitle">
                     <p>acro media</p>
                     <h1>Solving your complex ecommerce needs using design & technology.</h1>
                     <div className="heroButtonContainer">

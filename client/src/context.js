@@ -8,6 +8,7 @@ const AppProvider = ({ children }) => {
     const [isSubSubmenuOpen, setIsSubSubmenuOpen] = useState(false);
     const [page, setPage] = useState({ name:'',link:'',subMenu:[]});
     const [location, setLocation] = useState({});
+    const [isScroll, setIsScroll] = useState(false)
     // const [toggle, setToggle] = useState(false);
     
     const openSubmenu =(text,coordinates) =>{
@@ -25,6 +26,11 @@ const AppProvider = ({ children }) => {
   const toggle =(e)=>{
     e.preventDefault();
     setIsSubSubmenuOpen(!isSubSubmenuOpen);
+  };
+ 
+  const handleScrollTop =(scrollTop) => {
+   
+    scrollTop >= 50 ? setIsScroll(true) : setIsScroll(false)
   }
     
 
@@ -37,7 +43,9 @@ const AppProvider = ({ children }) => {
         isSubSubmenuOpen,
         location,
         page,
-        toggle
+        toggle,
+        handleScrollTop,
+        isScroll
        
       }}
     >
