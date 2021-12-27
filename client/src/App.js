@@ -1,19 +1,20 @@
 import React from 'react';
 import './App.css';
 import Hero from './Hero'
-import NestedList from './material';
+import NestedList from './Material';
 import Expertise from './Expertise';
 import Insight from './Insight';
+import Material from './Material'
 
 function App() {
 
   return (
     <React.Fragment>
-      <Hero/>
+      {/* <Hero/>
       <Expertise/>
       <Insight/>
-      
-
+       */}
+      <Material/>
     </React.Fragment>
   );
 }
