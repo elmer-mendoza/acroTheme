@@ -7,52 +7,30 @@ function Material() {
       <div className="hero">
         <div className="">
           <header className='header'>
-            <img src="./images/logoCompact.svg" alt="" />
-            <nav className="nav collapsedHeader">
-              <ul>
-                <li>
-                  <button className="button"><a href="">services</a>
-                    <ul>
-                      <li>
-                        <button className="button"><a href="">consulting</a></button>
-                      </li>
-                      <li>
-                        <button className="button"><a href="">consulting</a></button>
-                      </li>
-                      <li>
-                        <button className="button"><a href="">consulting</a></button>
-                      </li>
-                      <li>
-                        <button className="button"><a href="">development</a></button>
-                      </li>
-                      <li>
-                        <button className="button"><a href="">consulting</a></button>
-                      </li>
-                      <li>
-                        <button className="button"><a href="">consulting</a></button>
-                      </li>
-                    </ul>
-                  </button>
+            <img className='navLogo' src="./images/logoCompact.svg" alt="" />
+            <nav className='nav collapsedHeader'>
+              <ul className='navList'>
+                <li className='navItem'><a href=''>case studies</a>
+                  <ul className='subList'>
+                    <li className='subItem'><a href=''>react</a></li>
+                    <li className='subItem'><a href=''>angular</a></li>
+                    <li className='subItem'><a href=''>ember<i><FaChevronDown/></i></a>
+                      <ul className="dropList">
+                        <li className='dropItem'><a href=''>react</a></li>
+                        <li className='dropItem'><a href=''>react</a></li>
+                        <li className='dropItem'><a href=''>react</a></li>
+                      </ul>
+                     </li>
+                  </ul>
                 </li>
-                <li>
-                  <button className="button"><a href="">services</a></button>
-                </li>
-                <li>
-                  <button className="button"><a href="">services</a></button>
-                </li>
-                <li>
-                  <button className="button"><a href="">services</a></button>
-                </li>
-                <li>
-                  <button className="button"><a href="">services</a></button>
-                </li>
-                <li>
-                  <button className="button"><a href="">services</a></button>
-                </li>
+                <li className='navItem'><a href=''>solutions</a></li>
+                <li className='navItem'><a href=''>customers</a></li>
+                <li className='navItem'><a href=''>case studies</a></li>
+                <li className='navItem'><a href=''>resources</a></li>
+                <li className='navItem'><a href=''>about</a></li>
+                <li className='navItem button navButton'><a href=''>contact</a></li>
               </ul>
-              <button className="button"><a href="">contact</a></button>
             </nav>
-            
             <div className="hamburger" >
               <div className="hamburger-inner"/>
             </div>
