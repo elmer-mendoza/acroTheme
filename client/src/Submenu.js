@@ -2,7 +2,7 @@ import React,{useEffect,useRef} from 'react'
 import {FaChevronDown,FaChevronUp} from "react-icons/fa";
 import { useGlobalContext } from './context';
 
-function Submenu() {
+function Submenu({list}) {
     const container = useRef(null)
     const {page,location,isSubmenuOpen,isSubSubmenuOpen,toggle,closeSubmenu}= useGlobalContext();
         
@@ -19,18 +19,17 @@ function Submenu() {
     })
         
  
-    useEffect(() => {
-        const submenu = container.current
-        const { center, bottom } = location
-        submenu.style.left = `${center}px`
-        submenu.style.top = `${bottom}px`
+    // useEffect(() => {
+    //     const submenu = container.current
+    //     const { center, bottom } = location
+    //     submenu.style.left = `${center}px`
+    //     submenu.style.top = `${bottom}px`
          
-    }, [page, location]);
+    // }, [page, location]);
     
     return (
-        <div className={`${isSubmenuOpen ? 'submenu show' : 'submenu'}`}
-                    ref={container} onMouseLeave={closeSubmenu}>
-                        {page.subMenu.map(menu=>{
+        <div className="subList">
+                           {list.subMenu.map(menu=>{
                             return(
                                     <ul className='submenuContainer'>
                                         <li>

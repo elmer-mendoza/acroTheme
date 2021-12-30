@@ -10,11 +10,11 @@ function App() {
 
   return (
     <React.Fragment>
-      {/* <Hero/>
+      <Hero/>
       <Expertise/>
       <Insight/>
-       */}
-      <Material/>
+      
+      {/* <Material/> */}
     </React.Fragment>
   );
 }

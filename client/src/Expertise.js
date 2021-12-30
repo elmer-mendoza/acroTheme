@@ -3,8 +3,8 @@ import {expertise} from "./data";
 
 function Expertise() {
     return (
-        <div className="expertise">
-            <div className="row">
+        <div className="expertise container">
+            <div className=" row">
                 <h2>Our proven process & experts solve problems & deliver solutions.</h2>
             </div>
             <div className='row'>
