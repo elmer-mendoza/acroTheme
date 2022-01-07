@@ -4,32 +4,21 @@ import {navList} from './data';
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-    const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
-    const [isSubSubmenuOpen, setIsSubSubmenuOpen] = useState(false);
-    const [page, setPage] = useState({ name:'',link:'',subMenu:[]});
-    const [location, setLocation] = useState({});
+    const [isDropListOpen, setIsDropListOpen] = useState(false);
     const [isScroll, setIsScroll] = useState(false)
-    // const [toggle, setToggle] = useState(false);
+    const [sidebarOpen, setSidebarOpen] = useState(false)
+
     
-    const openSubmenu =(text,coordinates) =>{
-        const page = navList.find((list) => list.name === text);
-        if (page.subMenu) {
-            setLocation(coordinates);
-            setPage(page);
-            setIsSubmenuOpen(true)
-       } 
-    } 
-    const closeSubmenu = () => {
-    setIsSubmenuOpen(false);
+  const toggleArrow =(e)=>{
+    e.preventDefault();
+    setIsDropListOpen(!isDropListOpen);
+  };
+  const toggleHamburger =(e)=>{
+    e.preventDefault();
+    setSidebarOpen(!sidebarOpen);
   };
 
-  const toggle =(e)=>{
-    e.preventDefault();
-    setIsSubSubmenuOpen(!isSubSubmenuOpen);
-  };
- 
   const handleScrollTop =(scrollTop) => {
-   
     scrollTop >= 50 ? setIsScroll(true) : setIsScroll(false)
   }
     
@@ -37,16 +26,12 @@ const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
-        openSubmenu,
-        closeSubmenu,
-        isSubmenuOpen, 
-        isSubSubmenuOpen,
-        location,
-        page,
-        toggle,
+        isDropListOpen,
+        toggleArrow,
         handleScrollTop,
-        isScroll
-       
+        isScroll,
+        toggleHamburger,
+        sidebarOpen
       }}
     >
       {children}

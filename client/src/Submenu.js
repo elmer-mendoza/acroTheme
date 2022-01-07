@@ -1,59 +1,39 @@
-import React,{useEffect,useRef} from 'react'
+import React from 'react'
 import {FaChevronDown,FaChevronUp} from "react-icons/fa";
 import { useGlobalContext } from './context';
 
-function Submenu({list}) {
-    const container = useRef(null)
-    const {page,location,isSubmenuOpen,isSubSubmenuOpen,toggle,closeSubmenu}= useGlobalContext();
+function Submenu({subList}) {
+    const {isDropListOpen,toggleArrow}= useGlobalContext();
         
-    const Subpage =({menu})=> menu.subMenu.map((menu,index)=>{
-        return(
-        <div className={isSubSubmenuOpen ? 'subSubMenu show' : 'subSubMenu'}>
-            <ul>
-                <li>
-                    <a href={menu.link}>{menu.name}</a> 
-                </li>
-            </ul>
-        </div>
+    const DropList =({list})=> {
+           return(
+        <ul className={isDropListOpen ? 'dropList show' : 'dropList'}>
+            {list.subMenu.map((menu,index)=>{
+                return (
+                    <li className='dropItem'><a href={menu.link}>{menu.name}</a></li>
+                    )
+            })}
+         </ul>
         )
-    })
-        
- 
-    // useEffect(() => {
-    //     const submenu = container.current
-    //     const { center, bottom } = location
-    //     submenu.style.left = `${center}px`
-    //     submenu.style.top = `${bottom}px`
-         
-    // }, [page, location]);
-    
+    }
+
     return (
         <div className="subList">
-                           {list.subMenu.map(menu=>{
-                            return(
-                                    <ul className='submenuContainer'>
-                                        <li>
-                                            <div className=" subcategory row">
-
-                                                <div className='listName'>                                              
-                                                    <a href={menu.link}>{menu.name}</a> 
-                                                </div>
-                                                <div>
-                                                    <a className="subArrowIcon" href="">
-                                                        {menu.subMenu?
-                                                        (isSubSubmenuOpen ? <FaChevronUp onClick={toggle}/>:<FaChevronDown onClick={toggle}/>)
-                                                        :null}
-                                                    </a>
-                                                </div>
-                                                </div>
-                                            <div>
-                                              {menu.subMenu ? <Subpage menu={menu}/>: null}  
-                                            </div>
-                                       </li>
-                                     </ul>
-                            )
-                           
-                         })}
+         <ul >
+            {subList.subMenu.map(list=>{
+            return(
+                <li className="subItem">
+                    <a href={list.link}><p>{list.name}</p>
+                            {list.subMenu?
+                            (isDropListOpen ? <span><FaChevronUp className="arrowIcon" onClick={toggleArrow}/></span>
+                            :<span><FaChevronDown className="arrowIcon" onClick={toggleArrow}/></span>)
+                            :null}
+                    </a> 
+                    {list.subMenu ? <DropList list={list}/>: null}  
+                </li>
+            )
+            })}
+         </ul>
         </div>
     )
 }
