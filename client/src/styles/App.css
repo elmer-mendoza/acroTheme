@@ -705,4 +705,136 @@ li {
 }
 
 /* ******************WORKS end************ */
+/* ******************FOOTER start************ */
+.footerIntro {
+  background-color: #f95e27;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem 1rem;
+  color: #fff;
+}
+
+.footerIntro p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1.875rem;
+  line-height: 1.5;
+}
+
+.footerIntro btn {
+  background-color: #25282e;
+  padding: 1rem .5rem !important;
+  width: 50%;
+  margin: auto;
+}
+
+.footerIntro a {
+  color: #fff;
+}
+
+.footerIntro i {
+  color: #f95e27;
+}
+
+.footerSocialIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footerSocialIcon ul, .footerMenuIcon .row {
+  gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footerBody {
+  padding: 3rem 1rem;
+}
+
+@media only screen and (min-width: 960px) {
+  .footerBody {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.footerMenuIcon .row {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footerMenuIcon path {
+  fill: #f95e27;
+  margin-right: .25rem;
+}
+
+.footerMenuIcon {
+  padding: 2rem 0;
+}
+
+.footerMenuIcon svg {
+  margin-right: .5rem;
+}
+
+.footerBodyIcon img {
+  display: block;
+  margin: auto;
+}
+
+.footerEnd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  place-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 960px) {
+  .footerEnd {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.footerEnd li {
+  margin-inline: 1rem;
+}
+
+.footerEnd a {
+  color: #f95e27;
+}
+
+/* ******************FOOTER end************ */
 /*# sourceMappingURL=App.css.map */

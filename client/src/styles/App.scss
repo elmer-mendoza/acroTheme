@@ -568,3 +568,87 @@
 
 /* ******************WORKS end************ */
 
+/* ******************FOOTER start************ */
+.footerIntro {
+    background-color: $--clr-primary-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:3rem 1rem;
+    color:$--clr-light;
+}
+.footerIntro p{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1.875rem;
+    line-height: 1.5;
+}
+.footerIntro btn{
+    background-color: $--clr-primary-2;
+    padding: 1rem .5rem !important;
+    width:50%;
+    margin:auto;
+}
+.footerIntro a{
+    color:$--clr-light;
+}
+.footerIntro i{
+    color:$--clr-primary-1;
+}
+.footerSocialIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center
+    ;
+}
+.footerSocialIcon ul,.footerMenuIcon .row {
+    gap:2rem;
+    justify-content: center;
+}
+.footerBody {
+    padding: 3rem 1rem;
+    @include minScreen960{
+        display:flex;
+        justify-content: space-between;
+    }
+    
+ }
+.footerMenuIcon .row {
+    flex-wrap: wrap;
+    gap:1rem;
+}
+.footerMenuIcon path{
+    fill:$--clr-primary-1;
+    margin-right: .25rem;
+}
+.footerMenuIcon {
+    padding:2rem 0;
+}
+.footerMenuIcon svg{
+    margin-right: .5rem;
+}
+.footerBodyIcon img{
+   display: block;
+   margin: auto;
+}
+.footerEnd{
+    display: flex;
+    flex-direction: column;
+    place-items:center ;
+    gap:1rem;
+    margin-bottom: 2rem;
+    @include minScreen960{
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+.footerEnd li{
+    margin-inline:1rem;
+}
+.footerEnd a{
+    color:$--clr-primary-1;
+
+}
+/* ******************FOOTER end************ */
+

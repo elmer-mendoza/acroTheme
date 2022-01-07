@@ -8,6 +8,7 @@ import Material from './Material';
 import Report from './Report';
 import Partners from './Partners';
 import Works from './Works';
+import Footer from './Footer';
 
 function App() {
 
@@ -19,8 +20,7 @@ function App() {
       <Report/>
       <Partners/>
       <Works/>
-      
-      {/* <Material/> */}
+      <Footer/>
     </React.Fragment>
   );
 }
