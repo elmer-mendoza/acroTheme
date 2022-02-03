@@ -95,3 +95,50 @@ export const expertise = [
     }
 ]  
 
+export const insights = [
+    {
+        title:"Must have requirements for your ecommerce site featured image",
+        image:"https://nginx.production.acro-media-corp-site-backend.lagoon-prd.acromedia.com/sites/default/files/styles/card/public/2021-03/acro-blog-web-design-and-conversion-points.jpg.webp?itok=e_q4qYvJ",
+        link:""
+    },
+    {
+        title:"Ecommerce Business Life Cycle Technology Requirements featured title",
+        image:"https://nginx.production.acro-media-corp-site-backend.lagoon-prd.acromedia.com/sites/default/files/styles/card/public/2021-03/acro.blog-ecommerce-business-lifecycle-stages.jpg.webp?itok=MW-KH0Xb",
+        link:""
+    },
+    {
+        title:"How to Create a Product Catalog with Search API, Solr and Facets featured image",
+        image:"https://nginx.production.acro-media-corp-site-backend.lagoon-prd.acromedia.com/sites/default/files/styles/card/public/2021-03/acro-blog-create-product-catalog.jpg.webp?itok=cWf7O4G6",
+        link:""
+    },
+    {
+        title:"Drupal Commerce Checkout: An Example of Being Headless Ready featured image",
+        image:"https://nginx.production.acro-media-corp-site-backend.lagoon-prd.acromedia.com/sites/default/files/styles/card/public/2021-03/acro.blog-drupal-headless-checkout.jpg.webp?itok=wxv263nY",
+        link:""
+    }
+   
+]  
+export const partners = [
+    {
+        image:"https://nginx.production.acro-media-corp-site-backend.lagoon-prd.acromedia.com/sites/default/files/styles/content_image/public/2021-03/partner-logo-drupal-partner.png.webp?itok=OTV260JQ",
+        link:""
+    },
+    {
+        image:"https://nginx.production.acro-media-corp-site-backend.lagoon-prd.acromedia.com/sites/default/files/styles/content_image/public/2021-03/partner-logo-taxjar.png.webp?itok=uETsQStf",
+        link:""
+    },
+    {
+        image:"https://nginx.production.acro-media-corp-site-backend.lagoon-prd.acromedia.com/sites/default/files/styles/content_image/public/2021-03/partner-logo-acquia.png.webp?itok=qsABf5M8",
+        link:""
+    },
+    {
+        image:"https://nginx.production.acro-media-corp-site-backend.lagoon-prd.acromedia.com/sites/default/files/styles/content_image/public/2021-03/partner-logo-bluesnap.png.webp?itok=Gr4hRh_l",
+        link:""
+    },
+    {
+        image:"https://nginx.production.acro-media-corp-site-backend.lagoon-prd.acromedia.com/sites/default/files/styles/content_image/public/2021-03/partner-logo-aws.png.webp?itok=vTuU-qvP",
+        link:""
+    },
+   
+   
+]  

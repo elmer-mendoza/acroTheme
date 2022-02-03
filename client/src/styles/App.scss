@@ -38,7 +38,9 @@
      border: none;
  }
 
- 
+ .FaChevronRight{
+      transform:translateY(3px);
+ }
  .container{
      width:90vw;
      margin:auto;
@@ -106,10 +108,12 @@
         flex-wrap: wrap;
     }
     &__btnList li {
+       
         margin:0 2em .75em 0;
         border-radius: 3px;
         padding:.5em 1.5em;
         border:solid 1px $--clr-primary-1;
+        
     }
     &__btnList a{
         font-size: .85rem;
@@ -153,15 +157,15 @@
     }
 }
  .sideNav {
-        
         @include md-screen{
         box-shadow:0 5px 15px rgba(0, 0, 0, 0.2); 
         padding:20px;
         max-width:500px;
         width: 100%;
+        height: 95vh;
+        z-index : 1 ;
         position:absolute;
         background-color: $--clr-light;
-        z-index: 100;
         top:60px;
         right:0;
         overflow:auto !important;
@@ -174,6 +178,9 @@
             font-weight: 300;
             & .arrowIcon.primary{
                 color:$--clr-light !important;
+            }
+            &:hover p{
+                color:$--clr-primary-1;
             }
         }
         & .subItem a{
@@ -213,7 +220,6 @@
     display:flex;
     gap: 2rem; 
     }
-
 }
 .navItem{
     position:relative;
@@ -234,6 +240,12 @@
         display:flex;
         justify-content: center;
         align-items: center;
+        &:hover .txtColor {
+            color:$--clr-primary-1 !important;
+        }
+        &:hover .arrowIcon {
+            transform: translateY(5px);
+        }
     }
 }
 .subList {
@@ -257,6 +269,9 @@
     & .arrowIcon{
         padding-left:auto;
     }
+    &:hover p{
+        color:$--clr-primary-1 !important;
+    }
 }
 .dropList{
     display: none;
@@ -270,6 +285,9 @@
   font-size: 0.85rem;
   font-weight: 300;
   line-height: 1.43;
+  &:hover a{
+      color: $--clr-primary-1 !important;
+  }
  }
 
  .hamburger{

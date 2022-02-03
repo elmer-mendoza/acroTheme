@@ -27,7 +27,7 @@ function Expertise() {
                 </div>
                 <div className="col col2">
                     <p>We are a digital commerce agency that integrates into your business. A true ally, building on-demand commerce solutions to match your company's needs.</p>
-                    <button className='btn'><a href="">Let's talk<i><FaChevronRight/></i></a></button>
+                    <button className='btn'><a href="">Let's talk<i><FaChevronRight className='FaChevronRight'/></i></a></button>
                 </div>
             </div>
         </div>

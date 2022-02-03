@@ -11,7 +11,7 @@ function Report() {
           <div className="col">
             <h2>Ecommerce trends for retail & B2C.</h2>
             <p>Find out how your online business stacks up against the leaders.</p>
-            <button className='btn'><a href="">Read the report now<i><FaChevronRight/></i></a></button>
+            <button className='btn'><a href="">Read the report now<i><FaChevronRight className='FaChevronRight'/></i></a></button>
           </div>
         </div>
       </div>
