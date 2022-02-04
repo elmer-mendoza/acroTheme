@@ -80,7 +80,7 @@ li {
 }
 
 .hero__title {
-  padding-top: 9rem;
+  padding-top: 10vw;
   max-width: 850px;
 }
 
@@ -108,7 +108,7 @@ li {
 }
 
 .hero__btnList li {
-  margin: 0 2em .75em 0;
+  margin: 0 1.75em .75em 0;
   border-radius: 3px;
   padding: .5em 1.5em;
   border: solid 1px #f95e27;
@@ -124,6 +124,7 @@ li {
   padding: .5rem 2rem;
   width: 100%;
   position: fixed;
+  -webkit-backface-visibility: hidden;
   background-color: #fff;
 }
 
@@ -346,6 +347,12 @@ li {
 
 .dropItem:hover a {
   color: #f95e27 !important;
+}
+
+@media screen and (max-width: 760px) {
+  .hamburger {
+    padding-right: 60px;
+  }
 }
 
 .hamburger {
@@ -581,7 +588,7 @@ li {
 }
 
 .report img {
-  width: 375px;
+  width: 80vw;
 }
 
 @media only screen and (min-width: 960px) {

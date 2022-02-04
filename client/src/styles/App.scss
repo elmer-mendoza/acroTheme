@@ -87,7 +87,7 @@
     background-repeat: no-repeat;
     min-height: 95vh;
     &__title {
-       padding-top:9rem;
+       padding-top:10vw;
        max-width: 850px;
        & p{
            color:$--clr-primary-3;
@@ -109,7 +109,7 @@
     }
     &__btnList li {
        
-        margin:0 2em .75em 0;
+        margin:0 1.75em .75em 0;
         border-radius: 3px;
         padding:.5em 1.5em;
         border:solid 1px $--clr-primary-1;
@@ -121,10 +121,14 @@
     }
 }
  /* ********HEADER start******* */
+
+ 
  .header{
      padding:.5rem 2rem;
      width:100%;
+    //  position: absolute;
      position: fixed;
+     -webkit-backface-visibility: hidden;
      background-color: $--clr-light;
      @include lg-screen {
          display:flex !important;
@@ -289,8 +293,13 @@
       color: $--clr-primary-1 !important;
   }
  }
-
+ @media screen and (max-width: 760px) {
+    .hamburger {
+      padding-right:60px;
+    }
+  }
  .hamburger{
+    
      display: none;
      @include md-screen{
          display: block;
@@ -469,13 +478,14 @@
     & .col:nth-child(2) {
       padding-left: 1rem;
   }
+
   & img {
       @include minScreen960{
          height:300px;
          width:auto;
          padding-right: 4rem;
       }
-     width:375px;
+     width:80vw;
   }
   & h2{
       font-size:calc( 36px + (44 - 36) * ( (100vw - 600px) / ( 1280 - 600) )) ;
